@@ -3,41 +3,25 @@
 
   <?php
 
-    require 'product.php';
+  //require del file della classe
 
-    $nike = new shoes();
+    require 'shoes.php';
 
-    $nike->brand = 'Nike';
-    $nike->type = 'oldschool';
-    $nike->size = '41';
-    $nike->color ='blue';
-    $nike->price = '99$';
+ //creazione oggetto tramite il costruttore
+
+    $nike = new shoes('nike','lunar', 42, 34, 100);
 
     // var_dump($nike); die();
 
+    $vans = new shoes('vans','oldschool',40, 20, 79);
 
-    $vans = new shoes();
-
-    $vans->brand = 'Vans';
-    $vans->type = 'low';
-    $vans->size = '42';
-    $vans->color ='red';
-    $vans->price = '75$';
-
-    $puma = new shoes();
-
-    $puma->brand = 'Puma';
-    $puma->type = 'running';
-    $puma->size = '38';
-    $puma->color ='white';
-    $puma->price = '88$';
+    $puma = new shoes('puma','running',50, 10, 99);
 
 
   ?>
 
   <ul>
-    <!-- <li><?php echo $nike->brand . ' - ' .$nike->type . ' - ' .$nike->size . ' - ' .$nike->color . ' - ' . $nike->price ?></li> -->
-    <li><?php echo $nike->getFullName(); ?></li>
-    <li><?php echo $vans->getFullName(); ?></li>
-    <li><?php echo $puma->getFullName(); ?></li>
+    <li>L'articolo <?php echo $nike->getFullName(); ?> quantità disponibile a magazzino <?php echo $nike->quantity; ?></li>
+    <li>L'articolo <?php echo $vans->getFullName(); ?> quantità disponibile a magazzino <?php echo $vans->quantity; ?></li>
+    <li>L'articolo <?php echo $puma->getFullName(); ?> quantità disponibile a magazzino <?php echo $puma->quantity; ?></li>
   </ul>
