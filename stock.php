@@ -20,8 +20,10 @@
 
   ?>
 
+  <!-- stampa a schermo degli oggetti  -->
+
   <ul>
-    <li>L'articolo <?php echo $nike->getFullName(); ?> quantità disponibile a magazzino <?php echo $nike->quantity; ?></li>
-    <li>L'articolo <?php echo $vans->getFullName(); ?> quantità disponibile a magazzino <?php echo $vans->quantity; ?></li>
-    <li>L'articolo <?php echo $puma->getFullName(); ?> quantità disponibile a magazzino <?php echo $puma->quantity; ?></li>
+    <li>L'articolo <?php echo $nike->getFullName(); ?> ----- ha una quantità disponibile a magazzino di <?php echo $nike->giacenza(); ?></li>
+    <li>L'articolo <?php echo $vans->getFullName(); ?> -----  ha una quantità disponibile a magazzino di <?php echo $vans->giacenza(); ?></li>
+    <li>L'articolo <?php echo $puma->getFullName(); ?> -----  ha una quantità disponibile a magazzino di <?php echo $puma->giacenza(); ?></li>
   </ul>

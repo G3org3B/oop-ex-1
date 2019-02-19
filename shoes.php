@@ -1,8 +1,8 @@
 <?php
 
+
  class shoes
  {
-
 
    public $brand;
    public $type;
@@ -10,7 +10,9 @@
    public $quantity;
    public $price;
 
-   function _construct($brand,$type,$size,$quantity,$price)
+   // costruttore per la creazione delle istanze negli oggetti
+
+   function __construct($brand,$type,$size,$quantity,$price)
    {
        // var_dump('ciao '); die();
        $this->brand = $brand;
@@ -21,12 +23,25 @@
 
    }
 
+   // funzione per definire l'ordine delle istanze nell'oggetto da stampare a schermo
+
    public function getFullName()
    {
-     $fullName = $this->brand . ' ' .$this->type . ' ' .$this->price . '$';
+     $fullName = $this->brand . ' ' .$this->type . ' al prezzo di ' .$this->price . '$';
 
      return $fullName;
    }
+
+   // funzione che ritorna la giacenza guardando nell'istanza dell'oggetto
+
+   public function giacenza()
+   {
+    $giacenza = $this->quantity . ' pezzi ';
+
+    return $giacenza;
+    }
+
+
 
  }
 
